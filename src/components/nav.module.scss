@@ -1,0 +1,14 @@
+.container,
+.sticky {
+  width: 100%;
+}
+// .container {
+//   position: absolute !important;
+//   bottom: 0;
+//   background-color: transparent !important;
+// }
+.sticky {
+  position: fixed !important;
+  background-color: #1b242f !important;
+  top: 0;
+}

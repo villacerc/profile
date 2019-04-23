@@ -1,9 +1,15 @@
 import React from "react"
 
-import Nav from "../components/nav"
+import Landing from "../sections/landing"
+import Services from "../sections/services"
 
 import "./index.scss"
 
-const IndexPage = () => <Nav />
+const IndexPage = () => (
+  <div>
+    <Landing />
+    <Services />
+  </div>
+)
 
 export default IndexPage
