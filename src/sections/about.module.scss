@@ -1,0 +1,31 @@
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.skills {
+  display: flex;
+  button {
+    transition: all 0.3s;
+    margin-right: 10px;
+  }
+}
+.skillsList {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  > div {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  i {
+    font-size: 55px;
+  }
+}
+.cardContent {
+  width: 100%;
+  h3 {
+    text-align: center;
+  }
+}

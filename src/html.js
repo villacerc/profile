@@ -14,6 +14,10 @@ export default function HTML(props) {
         {props.headComponents}
         <link
           rel="stylesheet"
+          href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
+        />
+        <link
+          rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"
         />
         <link
