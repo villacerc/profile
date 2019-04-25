@@ -1,0 +1,159 @@
+.container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+}
+.header {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  i {
+    font-size: 20pt;
+    cursor: pointer;
+    transition: color 0.5s;
+    color: lightgrey;
+    &:hover {
+      color: white;
+    }
+  }
+}
+.backdrop {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  transition: opacity 0.5s;
+  animation: fadeIn 0.5s;
+}
+.box {
+  position: relative;
+  transition: all 0.3s;
+  align-items: flex-start;
+  text-align: left;
+  box-sizing: border-box;
+  color: #333;
+  opacity: 1;
+  transform: scale(1);
+  animation: zoomIn 0.5s;
+  transition: transform 0.5;
+}
+.pos {
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  color: lightgrey;
+}
+.gallery {
+  // display: flex;
+  align-items: center;
+  color: white;
+  perspective: 1000px;
+  i {
+    cursor: pointer;
+    color: lightgray;
+    font-size: 50pt;
+    transition: color 0.5s;
+    &:hover {
+      color: white;
+    }
+  }
+}
+.photo {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  position: relative;
+  transition: opacity 0.3s;
+}
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+.back {
+  transform: rotateY(180deg);
+}
+.caption {
+  // width: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  background: white;
+  margin: auto;
+  padding: 25px 15px;
+  box-sizing: border-box;
+}
+.title {
+  position: relative;
+  a {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 10pt;
+  }
+  h2 {
+    margin: 0 0 3px 0;
+  }
+}
+.about {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.4);
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.info {
+  font-size: 11pt;
+  margin-top: 10px;
+  line-height: 15pt;
+}
+.flipLeft {
+  transition: transform 0.5s;
+  transform: rotateY(-180deg);
+}
+.flipRight {
+  transition: transform 0.5s;
+  transform: rotateY(180deg);
+}
+.zoomOut {
+  opacity: 0;
+  transform: scale(0.8);
+}
+.fadeOut {
+  opacity: 0;
+}
+.fadeIn {
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
