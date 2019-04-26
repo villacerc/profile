@@ -23,9 +23,9 @@
     font-size: 55px;
   }
 }
-.cardContent {
-  width: 100%;
-  h3 {
-    text-align: center;
+.content {
+  text-align: center;
+  > div {
+    margin-bottom: 10px;
   }
 }

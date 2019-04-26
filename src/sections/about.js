@@ -6,14 +6,14 @@ import styles from "./about.module.scss"
 
 class About extends React.Component {
   componentDidMount() {
-    mixitup(this.skills, {
-      animation: {
-        duration: 500,
-        nudge: true,
-        reverseOut: true,
-        effects: "fade scale(0.01)",
-      },
-    })
+    // mixitup(this.skillsRef, {
+    //   animation: {
+    //     duration: 500,
+    //     nudge: true,
+    //     reverseOut: true,
+    //     effects: "fade scale(0.01)",
+    //   },
+    // })
   }
 
   skills = [
@@ -42,13 +42,29 @@ class About extends React.Component {
     { filter: "other", iconStr: "devicon-java-plain-wordmark colored" },
   ]
 
-  //   setTimeout(
-  //     () =>
-  //       this.setState({
-  //         gallery: "",
-  //       }),
-  //     4000
-  //   )
+  values = [
+    {
+      title: "User Experience",
+      text:
+        "My goal is to build products that are not just useful but also attractive, efficient and fun.",
+    },
+    {
+      title: "Fast Apps",
+      text:
+        "I like to apply caching, lazy loading and bundle splitting in my code to achieve high performance.",
+    },
+    {
+      title: "Modern Technologies",
+      text:
+        "I keep an eye on latest trends and implement solutions to ensure my apps are up to date.",
+    },
+    {
+      title: "Knowledge",
+      text:
+        "I am naturally curious and like to learn new techniques to improve my skills as a developer.",
+    },
+  ]
+
   render() {
     return (
       <section className="section" id="about">
@@ -59,32 +75,32 @@ class About extends React.Component {
           </h4>
           <div className="container">
             <p style={{ fontSize: "15px" }}>
-              Web developer with more than <strong>4 years</strong> of
-              well-rounded experience with a degree in the field of
-              <strong>Computer Science</strong>, extensive knowledge of modern
-              Web techniques and love for <strong>Coffee</strong>. Looking for
-              an opportunity to work and upgrade, as well as being involved in
-              an organization that believes in gaining a competitive edge and
-              giving back to the community.
+              Web developer with 2 years experience specializing in Node.js,
+              Ruby, React and PostgreSQL. Strong knowledge of e-commerce
+              platforms focusing on property management, bookkeeping and
+              reporting. Loves making awesome ideas come to life.
             </p>
           </div>
         </div>
-
-        <div className="columns has-same-height is-gapless">
-          <div className="column">
-            <div className="card">
-              <div className={classNames("card-content", styles.cardContent)}>
-                <h3 className="title is-4">Things I Value</h3>
-
-                <div className="content">
-                  <h6>User Experience</h6>
-                  <h6>Fast Apps</h6>
-                  <h6>Modern Technologies</h6>
-                  <h6>knowledge</h6>
+        <h4 style={{ textAlign: "center" }} class="title is-5">
+          Things I value
+        </h4>
+        <div className="columns is-multiline is-mobile">
+          {this.values.map(({ title, text }, i) => {
+            return (
+              <div key={i} className="column is-half-desktop">
+                <div className="box">
+                  <div className="content">
+                    <h4 className="title is-5">{title}</h4>
+                    {text}
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
+            )
+          })}
+        </div>
+
+        {/* <div className="columns has-same-height is-gapless">
           <div className="column is-half">
             <div className={classNames("card", styles.skills)}>
               <div className={classNames("card-content", styles.cardContent)}>
@@ -121,7 +137,7 @@ class About extends React.Component {
                 </div>
                 <div className="content">
                   <div
-                    ref={el => (this.skills = el)}
+                    ref={el => (this.skillsRef = el)}
                     className={styles.skillsList}
                   >
                     {this.skills.map(({ filter, iconStr, title }, i) => (
@@ -138,7 +154,7 @@ class About extends React.Component {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
     )
   }

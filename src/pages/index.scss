@@ -5,6 +5,9 @@ body {
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  ::placeholder {
+    color: rgba(0, 0, 0, 0.6) !important;
+  }
 }
 h1,
 h2,

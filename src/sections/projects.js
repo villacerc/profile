@@ -22,7 +22,7 @@ class Projects extends React.Component {
                   onClick={() => this.setState({ openLb: true })}
                   className="column is-12-mobile is-half-tablet is-one-quarter-desktop"
                 >
-                  <figure className="iimage is-5by4">
+                  <figure className="image is-5by4">
                     <img
                       style={{ width: "100%", height: "100%" }}
                       src="https://placekitten.com/g/600/480"

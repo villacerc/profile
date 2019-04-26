@@ -15,12 +15,7 @@ const contact = () => {
         <div className="columns">
           <div className={classNames("column is-6 is-offset-3", styles.form)}>
             <input className="input" type="text" placeholder="Your Name *" />
-            <input
-              className="input"
-              type="email"
-              placeholder="Your Email *"
-              value=""
-            />
+            <input className="input" type="email" placeholder="Your Email *" />
             <textarea className="textarea" placeholder="Your Message *" />
             <button className="button is-primary is-outlined is-medium">
               <i style={{ marginRight: "10px" }} class="fas fa-envelope" />
