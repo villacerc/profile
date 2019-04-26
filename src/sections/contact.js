@@ -18,7 +18,7 @@ const contact = () => {
             <input className="input" type="email" placeholder="Your Email *" />
             <textarea className="textarea" placeholder="Your Message *" />
             <button className="button is-primary is-outlined is-medium">
-              <i style={{ marginRight: "10px" }} class="fas fa-envelope" />
+              <i style={{ marginRight: "10px" }} className="fas fa-envelope" />
               Submit
             </button>
           </div>

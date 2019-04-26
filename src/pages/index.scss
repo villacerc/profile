@@ -1,4 +1,4 @@
-// @import "~bulma/bulma.sass";
+@import "../global.scss";
 body {
   margin: 0;
   padding: 0;
@@ -28,4 +28,17 @@ h6 {
 .subtitle {
   font-weight: 400;
   font-style: italic;
+}
+.button {
+  color: $primary-color !important;
+  &:hover {
+    background-color: $primary-color !important;
+    color: white !important;
+  }
+}
+.is-outlined {
+  border-color: $primary-color !important;
+}
+.navbar-item:hover {
+  background-color: $primary-color !important;
 }

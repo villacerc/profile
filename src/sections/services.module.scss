@@ -1,3 +1,4 @@
+@import "../global.scss";
 .center {
   text-align: center;
 }
@@ -9,6 +10,9 @@
     position: relative;
     vertical-align: middle;
     width: 2.5em;
+  }
+  i {
+    color: $primary-color;
   }
   h4 {
     margin: 15px 0;

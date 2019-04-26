@@ -46,12 +46,12 @@ class About extends React.Component {
     {
       title: "User Experience",
       text:
-        "My goal is to build products that are not just useful but also attractive, efficient and fun.",
+        "My goal is to build products that are not just useful but also attractive, intuitive and fun.",
     },
     {
       title: "Fast Apps",
       text:
-        "I like to apply caching, lazy loading and bundle splitting in my code to achieve high performance.",
+        "I like to achieve high performance in my apps through caching, lazy loading and bundle splitting.",
     },
     {
       title: "Modern Technologies",
@@ -82,13 +82,16 @@ class About extends React.Component {
             </p>
           </div>
         </div>
-        <h4 style={{ textAlign: "center" }} class="title is-5">
+        <h4 style={{ textAlign: "center" }} className="title is-5">
           Things I value
         </h4>
         <div className="columns is-multiline is-mobile">
           {this.values.map(({ title, text }, i) => {
             return (
-              <div key={i} className="column is-half-desktop">
+              <div
+                key={i}
+                className="column is-12-mobile is-half-tablet is-half-desktop"
+              >
                 <div className="box">
                   <div className="content">
                     <h4 className="title is-5">{title}</h4>

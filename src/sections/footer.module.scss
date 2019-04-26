@@ -1,3 +1,4 @@
+@import "../global.scss";
 .icon {
   font-size: 20px;
   line-height: 50px;
@@ -8,9 +9,9 @@
   color: #fff;
   border-radius: 100%;
   outline: 0;
-  background-color: #212529;
+  background-color: #293347;
   &:hover {
-    background: blue;
+    background: $primary-color;
     color: white;
   }
 }
