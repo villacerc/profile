@@ -24,14 +24,14 @@ class About extends React.Component {
     },
     {
       name: "Ruby",
-      value: 70,
+      value: 75,
     },
     {
       name: "Javascript",
       value: 80,
     },
     {
-      name: "Node",
+      name: "Node.js",
       value: 75,
     },
     {
