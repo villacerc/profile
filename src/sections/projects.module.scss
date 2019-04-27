@@ -3,6 +3,8 @@
   cursor: pointer;
   overflow: hidden;
   border-radius: 12px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
   &:before {
     content: "";
     transition: all 0.5s;
@@ -13,7 +15,7 @@
     top: 0;
     left: 0;
     z-index: 1;
-    background-color: rgba(71, 23, 246, 0.7);
+    background-color: rgba(71, 23, 246, 0.9);
   }
   &:after {
     content: "";
@@ -43,6 +45,8 @@
   text-align: center;
   h1,
   p {
+    width: 70%;
+    margin: auto;
     color: #fff;
   }
   p:last-child {

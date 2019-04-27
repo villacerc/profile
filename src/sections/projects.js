@@ -4,6 +4,8 @@ import classNames from "classnames"
 import roomiaLanding from "../images/roomia-landing.png"
 import picknrollLanding from "../images/picknroll-landing.png"
 import foodsightLanding from "../images/foodsight-landing.png"
+import deltaKids from "../images/deltakids-landing.png"
+import jptSplash from "../images/jpt-splash.png"
 
 import Lightbox from "../components/lightbox"
 
@@ -18,7 +20,7 @@ class Projects extends React.Component {
     {
       thumb: roomiaLanding,
       title: "Roomia",
-      stack: "React, Ruby on Rails, PostgreSQL",
+      stack: "React, Ruby on Rails, PostgreSQL, AWS S3",
     },
     {
       thumb: picknrollLanding,
@@ -30,6 +32,17 @@ class Projects extends React.Component {
       title: "Foodsight",
       stack: "JQuery, Ruby on Rails, PostgreSQL",
     },
+    {
+      thumb: deltaKids,
+      title: "Delta Kids",
+      stack: "JQuery, Ruby on Rails, PostgreSQL",
+    },
+    {
+      thumb: jptSplash,
+      title: "Japanese Practice Tool",
+      stack: "Swift",
+      contain: true,
+    },
   ]
   render() {
     return (
@@ -40,7 +53,7 @@ class Projects extends React.Component {
         </div>
         <div className="container">
           <div className="columns is-multiline is-mobile">
-            {this.projects.map(({ thumb, title, stack }, i) => {
+            {this.projects.map(({ thumb, title, stack, contain }, i) => {
               return (
                 <div
                   key={i}
@@ -49,7 +62,11 @@ class Projects extends React.Component {
                 >
                   <figure className={classNames(styles.photo, "image is-5by3")}>
                     <img
-                      style={{ width: "100%", height: "100%" }}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: contain ? "contain" : "fill",
+                      }}
                       src={thumb}
                     />
                     <figcaption className={styles.hoverContent}>
