@@ -3,6 +3,8 @@ import classNames from "classnames"
 
 import Lightbox from "../components/lightbox"
 
+import styles from "./projects.module.scss"
+
 class Projects extends React.Component {
   state = {
     openLb: false,
@@ -16,17 +18,22 @@ class Projects extends React.Component {
         </div>
         <div className="container">
           <div className="columns is-multiline is-mobile">
-            {new Array(4).fill().map(() => {
+            {new Array(4).fill().map((e, i) => {
               return (
                 <div
+                  key={i}
                   onClick={() => this.setState({ openLb: true })}
-                  className="column is-12-mobile is-half-tablet is-one-quarter-desktop"
+                  className="column is-12-mobile is-three-quarters-mobile is-half-tablet is-one-quarter-desktop"
                 >
-                  <figure className="image is-5by4">
+                  <figure className={classNames(styles.photo, "image is-5by4")}>
                     <img
                       style={{ width: "100%", height: "100%" }}
                       src="https://placekitten.com/g/600/480"
                     />
+                    <figcaption className={styles.hoverContent}>
+                      <h1 className="title is-5">Roomia</h1>
+                      <p>React, Ruby On Rails, AWS</p>
+                    </figcaption>
                   </figure>
                 </div>
               )

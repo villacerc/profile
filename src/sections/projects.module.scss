@@ -1,0 +1,51 @@
+.photo {
+  position: relative;
+  cursor: pointer;
+  &:before {
+    content: "";
+    transition: all 0.5s;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(71, 23, 246, 0.7);
+  }
+  &:after {
+    content: "";
+    transition: all 0.5s;
+    height: 80%;
+    width: 80%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    opacity: 0;
+    z-index: 2;
+    border: 1px solid white;
+  }
+  &:hover {
+    .hoverContent,
+    &:before,
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+.hoverContent {
+  position: absolute;
+  top: 35%;
+  width: 100%;
+  text-align: center;
+  h1,
+  p {
+    color: #fff;
+  }
+  p:last-child {
+    font-size: 10pt;
+  }
+  z-index: 3;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
