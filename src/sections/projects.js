@@ -23,7 +23,7 @@ class Projects extends React.Component {
                 <div
                   key={i}
                   onClick={() => this.setState({ openLb: true })}
-                  className="column is-12-mobile is-three-quarters-mobile is-half-tablet is-one-quarter-desktop"
+                  className="column is-12-mobile is-three-quarters-mobile is-half-tablet is-one-third-desktop"
                 >
                   <figure className={classNames(styles.photo, "image is-5by4")}>
                     <img

@@ -1,6 +1,8 @@
 .photo {
   position: relative;
   cursor: pointer;
+  overflow: hidden;
+  border-radius: 12px;
   &:before {
     content: "";
     transition: all 0.5s;
@@ -24,6 +26,7 @@
     opacity: 0;
     z-index: 2;
     border: 1px solid white;
+    border-radius: 12px;
   }
   &:hover {
     .hoverContent,
