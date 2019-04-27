@@ -70,37 +70,37 @@ class About extends React.Component {
       <section className="section" id="about">
         <div className="section-heading">
           <h3 className="title is-2">About Me</h3>
-          <h4 className="subtitle is-5">
-            Jack of all trades, master of "some"
-          </h4>
+          <h4 className="subtitle is-5">Hello World!</h4>
           <div className="container">
-            <p style={{ fontSize: "15px" }}>
-              Web developer with 2 years experience specializing in Node.js,
-              Ruby, React and PostgreSQL. Strong knowledge of e-commerce
-              platforms focusing on property management, bookkeeping and
-              reporting. Loves making awesome ideas come to life.
+            <p style={{ fontSize: "16px" }}>
+              I am a web developer with 2 years experience specializing in
+              Node.js, Ruby, React and PostgreSQL. I have a strong knowledge of
+              e-commerce platforms focusing on property management, bookkeeping
+              and reporting. I love making awesome ideas come to life.
             </p>
           </div>
         </div>
         <h4 style={{ textAlign: "center" }} className="title is-5">
           Things I value
         </h4>
-        <div className="columns is-multiline is-mobile">
-          {this.values.map(({ title, text }, i) => {
-            return (
-              <div
-                key={i}
-                className="column is-12-mobile is-half-tablet is-half-desktop"
-              >
-                <div className="box">
-                  <div className="content">
-                    <h4 className="title is-5">{title}</h4>
-                    {text}
+        <div className="container">
+          <div className="columns is-multiline is-mobile">
+            {this.values.map(({ title, text }, i) => {
+              return (
+                <div
+                  key={i}
+                  className="column is-12-mobile is-half-tablet is-half-desktop"
+                >
+                  <div className="box">
+                    <div className="content">
+                      <h4 className="title is-5">{title}</h4>
+                      {text}
+                    </div>
                   </div>
                 </div>
-              </div>
-            )
-          })}
+              )
+            })}
+          </div>
         </div>
 
         {/* <div className="columns has-same-height is-gapless">
