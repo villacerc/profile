@@ -1,31 +1,11 @@
-.filters {
+.skill {
   display: flex;
+  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  position: relative;
 }
-.skills {
-  display: flex;
-  button {
-    transition: all 0.3s;
-    margin-right: 10px;
-  }
-}
-.skillsList {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  > div {
-    margin-right: 10px;
-    margin-bottom: 10px;
-  }
-  i {
-    font-size: 55px;
-  }
-}
-.content {
+.caption {
+  font-size: 14px;
   text-align: center;
-  > div {
-    margin-bottom: 10px;
-  }
+  position: absolute;
 }

@@ -1,47 +1,56 @@
 import React from "react"
-import mixitup from "mixitup"
+import EasyPieChart from "easy-pie-chart"
 import classNames from "classnames"
 
 import styles from "./about.module.scss"
 
 class About extends React.Component {
   componentDidMount() {
-    // mixitup(this.skillsRef, {
-    //   animation: {
-    //     duration: 500,
-    //     nudge: true,
-    //     reverseOut: true,
-    //     effects: "fade scale(0.01)",
-    //   },
-    // })
+    this.skills.forEach(({ el, value }, i) => {
+      const chart = new EasyPieChart(el, {
+        scaleColor: false,
+        lineWidth: 10,
+        barColor: "#4717f6",
+        lineCap: "butt",
+      })
+      chart.update(value)
+    })
   }
 
   skills = [
-    { filter: "frontend", iconStr: "devicon-react-original-wordmark colored" },
-    { filter: "backend", iconStr: "devicon-redis-plain-wordmark colored" },
     {
-      filter: "frontend",
-      iconStr: "devicon-webpack-plain colored",
-      title: "webpack",
+      name: "HTML/CSS",
+      value: 80,
     },
-    { filter: "backend", iconStr: "devicon-postgresql-plain colored" },
-    { filter: "frontend", iconStr: "devicon-bootstrap-plain-wordmark colored" },
-    { filter: "backend", iconStr: "devicon-mongodb-plain-wordmark colored" },
-    { filter: "frontend", iconStr: "devicon-html5-plain-wordmark colored" },
-    { filter: "other", iconStr: "devicon-swift-plain-wordmark colored" },
-    { filter: "frontend", iconStr: "devicon-javascript-plain colored" },
-    { filter: "backend", iconStr: "devicon-nodejs-plain-wordmark colored" },
-    { filter: "frontend", iconStr: "devicon-sass-original colored" },
-    { filter: "frontend", iconStr: "devicon-css3-plain-wordmark colored" },
-    { filter: "other", iconStr: "devicon-cplusplus-plain-wordmark colored" },
-    { filter: "backend", iconStr: "devicon-ruby-plain-wordmark colored" },
-    { filter: "backend", iconStr: "devicon-rails-plain-wordmark colored" },
-    { filter: "other", iconStr: "devicon-csharp-plain-wordmark colored" },
-    { filter: "frontend", iconStr: "devicon-jquery-plain-wordmark colored" },
-    { filter: "backend", iconStr: "devicon-express-original colored" },
-    { filter: "other", iconStr: "devicon-java-plain-wordmark colored" },
+    {
+      name: "Ruby",
+      value: 70,
+    },
+    {
+      name: "Javascript",
+      value: 80,
+    },
+    {
+      name: "Node",
+      value: 75,
+    },
+    {
+      name: "Java",
+      value: 40,
+    },
+    {
+      name: "C++",
+      value: 40,
+    },
+    {
+      name: "C#",
+      value: 40,
+    },
+    {
+      name: "Swift",
+      value: 45,
+    },
   ]
-
   values = [
     {
       title: "User Experience",
@@ -101,63 +110,30 @@ class About extends React.Component {
               )
             })}
           </div>
-        </div>
-
-        {/* <div className="columns has-same-height is-gapless">
-          <div className="column is-half">
-            <div className={classNames("card", styles.skills)}>
-              <div className={classNames("card-content", styles.cardContent)}>
-                <h3 className="title is-4">Skills</h3>
-                <div className={styles.filters}>
-                  <button
-                    className="button is-primary is-outlined is-rounded"
-                    type="button"
-                    data-filter="all"
-                  >
-                    All
-                  </button>
-                  <button
-                    className="button is-primary is-outlined is-rounded"
-                    type="button"
-                    data-filter=".frontend"
-                  >
-                    Frontend
-                  </button>
-                  <button
-                    className="button is-primary is-outlined is-rounded"
-                    type="button"
-                    data-filter=".backend"
-                  >
-                    Backend
-                  </button>
-                  <button
-                    className="button is-primary is-outlined is-rounded"
-                    type="button"
-                    data-filter=".other"
-                  >
-                    Other
-                  </button>
-                </div>
-                <div className="content">
-                  <div
-                    ref={el => (this.skillsRef = el)}
-                    className={styles.skillsList}
-                  >
-                    {this.skills.map(({ filter, iconStr, title }, i) => (
-                      <div
-                        key={i}
-                        style={{ display: "inline-block" }}
-                        className={classNames("mix", filter)}
-                      >
-                        <i title={title} className={iconStr} />
-                      </div>
-                    ))}
+          <h4
+            style={{ textAlign: "center", margin: "40px 0" }}
+            className="title is-5"
+          >
+            My Skills
+          </h4>
+          <div className="columns is-multiline is-mobile">
+            {this.skills.map(({ name, value }, i) => {
+              return (
+                <div
+                  className={classNames(
+                    styles.skill,
+                    "column is-half-mobile is-one-quarter-tablet"
+                  )}
+                  ref={el => (this.skills[i] = { el, name, value })}
+                >
+                  <div className={styles.caption}>
+                    <div>{name}</div> {value}%
                   </div>
                 </div>
-              </div>
-            </div>
+              )
+            })}
           </div>
-        </div> */}
+        </div>
       </section>
     )
   }
