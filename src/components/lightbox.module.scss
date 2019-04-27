@@ -49,8 +49,14 @@
   background: black;
   display: flex;
   justify-content: space-between;
-  padding: 10px;
   color: lightgrey;
+  line-height: 2;
+  text-align: center;
+  > div:nth-child(odd) {
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+  }
 }
 .gallery {
   // display: flex;
@@ -70,7 +76,12 @@
 .photo {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   position: relative;
-  transition: opacity 0.3s;
+  img {
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
 }
 .front,
 .back {
@@ -119,20 +130,14 @@
   margin-top: 10px;
   line-height: 15pt;
 }
-.flipLeft {
-  transition: transform 0.5s;
-  transform: rotateY(-180deg);
-}
-.flipRight {
-  transition: transform 0.5s;
-  transform: rotateY(180deg);
-}
 .zoomOut {
   opacity: 0;
   transform: scale(0.8);
 }
 .fadeOut {
-  opacity: 0;
+  img:nth-child(2) {
+    opacity: 0;
+  }
 }
 .fadeIn {
   animation: fadeIn 0.3s;

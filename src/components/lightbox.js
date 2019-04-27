@@ -5,40 +5,28 @@ import styles from "./lightBox.module.scss"
 
 class LightBox extends React.Component {
   photos = [
-    "http://placekitten.com/g/600/400",
+    "http://placekitten.com/g/610/410",
     "http://placekitten.com/g/600/400",
   ]
   state = {
     backdrop: "",
     box: "",
-    index: 0,
-    front: this.photos[0],
-    back: "",
-    photoStyle: "",
+    selectedIndex: 0,
   }
   switch = where => {
-    let { index } = this.state
-    let backIndex = null
+    let { selectedIndex } = this.state
 
     if (where === "left") {
-      backIndex = index ? index - 1 : this.photos.length - 1
+      selectedIndex = selectedIndex ? selectedIndex - 1 : this.photos.length - 1
     }
     if (where === "right") {
-      backIndex = index + 1 > this.photos.length - 1 ? 0 : index + 1
+      selectedIndex =
+        selectedIndex + 1 > this.photos.length - 1 ? 0 : selectedIndex + 1
     }
 
     this.setState({
-      photoStyle: styles.fadeOut,
-      back: this.photos[backIndex],
+      selectedIndex,
     })
-
-    setTimeout(() => {
-      this.setState({
-        index: backIndex,
-        front: this.photos[backIndex],
-        photoStyle: "",
-      })
-    }, 100)
   }
   close = () => {
     this.setState({
@@ -48,22 +36,19 @@ class LightBox extends React.Component {
     setTimeout(this.props.close, 500)
   }
   render() {
-    const { index } = this.state
+    const { selectedIndex } = this.state
     return (
       <div className="modal is-active">
         <div className="modal-background" />
         <div className="modal-content">
           <div className={classNames(styles.box, this.state.box)}>
             <div className={classNames(styles.gallery)}>
-              <div
-                className={classNames(
-                  this.state.photoStyle,
-                  styles.photo,
-                  "image is-5by3"
-                )}
-              >
-                <img src="http://placekitten.com/g/600/400" />
-                <img src="http://placekitten.com/g/600/400" />
+              <div className={classNames(styles.photo, "image is-5by3")}>
+                {this.photos.map((photo, i) => {
+                  const selected =
+                    this.state.selectedIndex === i ? { opacity: 0 } : {}
+                  return <img style={selected} src={photo} />
+                })}
               </div>
             </div>
             <div className={styles.pos}>
@@ -71,7 +56,7 @@ class LightBox extends React.Component {
                 <i className="fas fa-chevron-left" />
               </div>
               <div>
-                {index + 1} of {this.photos.length}
+                {selectedIndex + 1} of {this.photos.length}
               </div>
               <div onClick={() => this.switch("right")}>
                 <i className="fas fa-chevron-right" />
