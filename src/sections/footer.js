@@ -30,7 +30,9 @@ const footer = () => {
           </div>
         </div>
       </div>
-      <div className="copyright">Carlo Villaceran ©2019</div>
+      <div style={{ opacity: 0.5 }} className="copyright">
+        Carlo Villaceran ©2019
+      </div>
     </footer>
   )
 }

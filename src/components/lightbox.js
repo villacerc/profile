@@ -36,35 +36,40 @@ class LightBox extends React.Component {
       subtitle: "Property Management",
       url: "https://www.roomia.com",
       info:
-        "Roomia makes it easy for property managers to manage leases, track rent payments, handle reporting and bookkeeping. Single Page App with React and Ruby on Rails.",
+        "Roomia makes it easy for property managers to manage leases, track rent payments, handle reporting and bookkeeping.",
+      tags: ["SPA", "React", "Ruby on Rails", "PostgreSQL", "AWS S3"],
     },
     "Pick and Roll": {
       photos: [pickAndRoll],
       subtitle: "Basketball Pickup Game Finder",
       statusText: "Coming Soon",
       info:
-        "Finding a pickup game in your local centres is quick and easy or create your own and invite others. Single Page App with React and Express.js.",
+        "Finding a pickup game in your local centres is quick and easy or create your own and invite others.",
+      tags: ["SPA", "React", "Node.js", "MongoDB"],
     },
     Foodsight: {
       photos: [fs1, fs2, fs3, fs4],
       subtitle: "Food Dictionary",
       url: "https://foodsight.herokuapp.com",
       info:
-        "Learn more about those hard to pronounce food chemicals in a format that's easy to read. Also includes a discussion board, social media sharing and OAuth. Built with JQuery and Ruby on Rails.",
+        "Learn more about those hard to pronounce food chemicals in a format that's easy to read. Also includes a discussion board, social media sharing and OAuth.",
+      tags: ["JQuery", "Ruby on Rails", "PostgreSQL"],
     },
     "Delta Kids": {
       photos: [dk1, dk2, dk3, dk4],
       subtitle: "Kids Activities Listings",
       url: "https://www.deltakids.ca/",
       info:
-        "Discover family events, programs and resources available in the Delta community . Built with JQuery, Bootstrap and Ruby on Rails.",
+        "Discover family events, programs and resources available in the Delta community.",
+      tags: ["JQuery", "Ruby on Rails", "PostgreSQL"],
     },
     "Japanese Practice Tool": {
       photos: [jpt1, jpt2, jpt3],
       subtitle: "Practice Japanese!",
       objectFit: "contain",
       info:
-        "Practice hiragana through a matching game, stroke tutorials, and a reading exercise. Built with Swift for the iOS.",
+        "Practice hiragana through a matching game, stroke tutorials, and a reading exercise.",
+      tags: ["Swift"],
     },
   }
 
@@ -91,9 +96,15 @@ class LightBox extends React.Component {
   }
   render() {
     const { selectedIndex } = this.state
-    const { photos, subtitle, info, url, statusText, objectFit } = this.content[
-      this.props.title
-    ]
+    const {
+      photos,
+      subtitle,
+      info,
+      url,
+      statusText,
+      objectFit,
+      tags,
+    } = this.content[this.props.title]
     return (
       <div className="modal is-active">
         <div className="modal-background" />
@@ -149,6 +160,13 @@ class LightBox extends React.Component {
               </div>
               <div className={styles.about}>{subtitle}</div>
               <div className={styles.info}>{info}</div>
+              <div className="tags">
+                {tags.map((tag, i) => (
+                  <span key={i} className="tag">
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>

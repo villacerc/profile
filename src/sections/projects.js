@@ -21,27 +21,27 @@ class Projects extends React.Component {
     {
       thumb: roomiaLanding,
       title: "Roomia",
-      stack: "React, Ruby on Rails, PostgreSQL, AWS S3",
+      subtitle: "Property Management",
     },
     {
       thumb: picknrollLanding,
       title: "Pick and Roll",
-      stack: "React, Express, MongoDB",
+      subtitle: "Pick-up Game Finder",
     },
     {
       thumb: foodsightLanding,
       title: "Foodsight",
-      stack: "JQuery, Ruby on Rails, PostgreSQL",
+      subtitle: "Food Chemicals Dictionary",
     },
     {
       thumb: deltaKids,
       title: "Delta Kids",
-      stack: "JQuery, Ruby on Rails, PostgreSQL",
+      subtitle: "Kids Pograms Listings",
     },
     {
       thumb: jptSplash,
       title: "Japanese Practice Tool",
-      stack: "Swift",
+      subtitle: "iOS App",
       contain: true,
     },
   ]
@@ -54,7 +54,7 @@ class Projects extends React.Component {
         </div>
         <div className="container">
           <div className="columns is-multiline is-mobile">
-            {this.projects.map(({ thumb, title, stack, contain }, i) => {
+            {this.projects.map(({ thumb, title, subtitle, contain }, i) => {
               return (
                 <div
                   key={i}
@@ -72,7 +72,7 @@ class Projects extends React.Component {
                     />
                     <figcaption className={styles.hoverContent}>
                       <h1 className="title is-5">{title}</h1>
-                      <p>{stack}</p>
+                      <p>{subtitle}</p>
                     </figcaption>
                   </figure>
                 </div>
