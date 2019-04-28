@@ -44,8 +44,10 @@ a.is-active {
 .is-outlined {
   border-color: $primary-color !important;
 }
-.navbar-item:hover {
+.navbar-item {
   transition: all 0.5s;
+}
+.navbar-item:hover {
   background-color: $primary-color !important;
 }
 .navbar-menu {
