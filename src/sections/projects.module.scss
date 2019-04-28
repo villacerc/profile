@@ -2,9 +2,11 @@
   position: relative;
   cursor: pointer;
   overflow: hidden;
-  border-radius: 12px;
   background: white;
   border: 1px solid rgba(0, 0, 0, 0.2);
+  img {
+    transition: transform 0.5s;
+  }
   &:before {
     content: "";
     transition: all 0.5s;
@@ -15,22 +17,25 @@
     top: 0;
     left: 0;
     z-index: 1;
-    background-color: rgba(71, 23, 246, 0.9);
+    background-color: rgba(41, 51, 71, 0.8);
   }
   &:after {
     content: "";
     transition: all 0.5s;
     height: 80%;
-    width: 80%;
+    width: 90%;
     position: absolute;
     top: 10%;
-    left: 10%;
+    left: 5%;
     opacity: 0;
     z-index: 2;
     border: 1px solid white;
-    border-radius: 12px;
+    // border-radius: 12px;
   }
   &:hover {
+    img {
+      transform: scale(1.2);
+    }
     .hoverContent,
     &:before,
     &:after {
