@@ -120,6 +120,7 @@ class About extends React.Component {
             {this.skills.map(({ name, value }, i) => {
               return (
                 <div
+                  key={i}
                   className={classNames(
                     styles.skill,
                     "column is-half-mobile is-one-quarter-tablet"

@@ -14,6 +14,7 @@ import styles from "./projects.module.scss"
 class Projects extends React.Component {
   state = {
     openLb: false,
+    title: "",
   }
 
   projects = [
@@ -46,7 +47,7 @@ class Projects extends React.Component {
   ]
   render() {
     return (
-      <section className="section" id="services">
+      <section className="section" id="portfolio">
         <div className="section-heading">
           <h3 className="title is-2">PORTFOLIO</h3>
           <h4 className="subtitle is-5">See my latest works</h4>
@@ -57,7 +58,7 @@ class Projects extends React.Component {
               return (
                 <div
                   key={i}
-                  onClick={() => this.setState({ openLb: true })}
+                  onClick={() => this.setState({ openLb: true, title })}
                   className="column is-12-mobile is-three-quarters-mobile is-half-tablet is-one-third-desktop"
                 >
                   <figure className={classNames(styles.photo, "image is-5by3")}>
@@ -80,7 +81,10 @@ class Projects extends React.Component {
           </div>
         </div>
         {this.state.openLb && (
-          <Lightbox close={() => this.setState({ openLb: false })} />
+          <Lightbox
+            title={this.state.title}
+            close={() => this.setState({ openLb: false })}
+          />
         )}
       </section>
     )
