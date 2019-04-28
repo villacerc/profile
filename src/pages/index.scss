@@ -38,10 +38,16 @@ h6 {
     color: white !important;
   }
 }
+a.is-active {
+  background-color: $primary-color !important;
+}
 .is-outlined {
   border-color: $primary-color !important;
 }
 .navbar-item:hover {
   transition: all 0.5s;
   background-color: $primary-color !important;
+}
+.navbar-menu {
+  background-color: #293347 !important;
 }
