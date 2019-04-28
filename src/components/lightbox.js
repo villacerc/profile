@@ -64,7 +64,7 @@ class LightBox extends React.Component {
       subtitle: "Practice Japanese!",
       objectFit: "contain",
       info:
-        "Practice hiragana through a matching game, stroke tutorials, and a reading exercise. Built with Swift",
+        "Practice hiragana through a matching game, stroke tutorials, and a reading exercise. Built with Swift for the iOS.",
     },
   }
 
