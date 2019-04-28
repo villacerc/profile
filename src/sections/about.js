@@ -70,7 +70,7 @@ class About extends React.Component {
     {
       title: "Knowledge",
       text:
-        "I am naturally curious and like to learn new practices to improve my skills as a developer.",
+        "I am naturally curious and like to learn new things to improve my skills as a developer.",
     },
   ]
 
