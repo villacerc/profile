@@ -121,10 +121,7 @@ class About extends React.Component {
               return (
                 <div
                   key={i}
-                  className={classNames(
-                    styles.skill,
-                    "column is-half-mobile is-one-quarter-tablet"
-                  )}
+                  className={classNames(styles.skill, "column ")}
                   ref={el => (this.skills[i] = { el, name, value })}
                 >
                   <div className={styles.caption}>
