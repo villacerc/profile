@@ -50,6 +50,6 @@ a.is-active {
 .navbar-item:hover {
   background-color: $primary-color !important;
 }
-.navbar-menu {
+.navbar-menu.is-active {
   background-color: #293347 !important;
 }
