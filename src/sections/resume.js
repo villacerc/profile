@@ -1,5 +1,7 @@
 import React from "react"
 
+import myResume from "../images/CarloVillaceran_resume.pdf"
+
 const resume = () => {
   return (
     <section className="section" id="resume">
@@ -7,7 +9,8 @@ const resume = () => {
         <h3 className="title is-2">Resume</h3>
         <h4 className="subtitle is-5">More about me</h4>
         <a
-          href="#"
+          href={myResume}
+          download
           className="button is-rounded is-primary is-medium is-outlined"
         >
           <span className="icon">
