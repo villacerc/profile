@@ -4,10 +4,11 @@ import classNames from "classnames"
 import Particles from "../components/particles"
 import Nav from "../components/nav"
 
-import styles from "./landing.module.scss"
+import styles from "./home.module.scss"
 
-const Landing = () => (
+const home = () => (
   <section
+    id="home"
     style={{ position: "relative" }}
     className="hero is-link is-fullheight is-fullheight-with-navbar"
   >
@@ -29,4 +30,4 @@ const Landing = () => (
   </section>
 )
 
-export default Landing
+export default home

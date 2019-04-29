@@ -1,6 +1,6 @@
 import React from "react"
 
-import Landing from "../sections/landing"
+import Home from "../sections/home"
 import Services from "../sections/services"
 import About from "../sections/about"
 import Projects from "../sections/projects"
@@ -12,7 +12,7 @@ import "./index.scss"
 
 const IndexPage = () => (
   <div>
-    <Landing />
+    <Home />
     <About />
     <Services />
     <Resume />
