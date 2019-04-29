@@ -1,6 +1,7 @@
 import React from "react"
 import classNames from "classnames"
 import inView from "in-view"
+import scrollIntoView from "scroll-into-view"
 
 import styles from "./nav.module.scss"
 
@@ -42,6 +43,14 @@ class Nav extends React.Component {
       .on("exit", el => linkEl.classList.remove("is-active"))
   }
   items = ["About", "Services", "Resume", "Portfolio", "Contact"]
+  scrollTo = id => {
+    const el = document.getElementById(id)
+
+    const topOffset = id === "resume" ? -110 : -35
+
+    scrollIntoView(el, { align: { topOffset } })
+    this.setState({ toggleNav: false })
+  }
   render() {
     const navStyle = this.state.toggleNav ? "is-active" : ""
     return (
@@ -72,8 +81,8 @@ class Nav extends React.Component {
                 <a
                   key={i}
                   className="navbar-item"
-                  onClick={() => this.setState({ toggleNav: false })}
-                  href={`#${locased}`}
+                  onClick={() => this.scrollTo(locased)}
+                  // href={`#${locased}`}
                   id={`link-${locased}`}
                 >
                   {item}
