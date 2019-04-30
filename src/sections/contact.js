@@ -3,7 +3,12 @@ import classNames from "classnames"
 
 import styles from "./contact.module.scss"
 
-const contact = () => {
+const contact = props => {
+  const appendToUrl = () => {
+    if (!window.location.href.includes("thank-you")) {
+      window.location.href += "#thank-you"
+    }
+  }
   return (
     <section className="section" id="contact">
       <div className="container">
@@ -15,20 +20,42 @@ const contact = () => {
         <div className="columns">
           <div className={classNames("column is-6 is-offset-3", styles.form)}>
             <div className="box">
-              <input className="input" type="text" placeholder="Your Name *" />
-              <input
-                className="input"
-                type="email"
-                placeholder="Your Email *"
-              />
-              <textarea className="textarea" placeholder="Your Message *" />
-              <button className="button is-rounded is-primary is-outlined is-medium">
-                <i
-                  style={{ marginRight: "10px" }}
-                  className="fas fa-envelope"
+              <form
+                action="https://getsimpleform.com/messages?form_api_token=571f2ee41481eae45b625d5548725d22"
+                method="post"
+                onSubmit={appendToUrl}
+              >
+                <input
+                  name="name"
+                  className="input"
+                  required
+                  type="text"
+                  placeholder="Your Name *"
                 />
-                Submit
-              </button>
+                <input
+                  name="email"
+                  className="input"
+                  required
+                  type="email"
+                  placeholder="Your Email *"
+                />
+                <textarea
+                  name="message"
+                  className="textarea"
+                  required
+                  placeholder="Your Message *"
+                />
+                <button
+                  type="submit"
+                  className="button is-rounded is-primary is-outlined is-medium"
+                >
+                  <i
+                    style={{ marginRight: "10px" }}
+                    className="fas fa-envelope"
+                  />
+                  Submit
+                </button>
+              </form>
             </div>
           </div>
         </div>

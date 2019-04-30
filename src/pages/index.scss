@@ -30,6 +30,16 @@ h6 {
   font-weight: 400;
   font-style: italic;
 }
+.is-toast-top {
+  .message-header {
+    min-height: 60px;
+  }
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  left: 0;
+}
 .button {
   color: $primary-color !important;
   transition: all 0.5s;
