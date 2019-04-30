@@ -3,12 +3,7 @@ import classNames from "classnames"
 
 import styles from "./contact.module.scss"
 
-const contact = props => {
-  const appendToUrl = () => {
-    if (!window.location.href.includes("thank-you")) {
-      window.location.href += "#thank-you"
-    }
-  }
+const contact = () => {
   return (
     <section className="section" id="contact">
       <div className="container">
@@ -23,8 +18,12 @@ const contact = props => {
               <form
                 action="https://getsimpleform.com/messages?form_api_token=571f2ee41481eae45b625d5548725d22"
                 method="post"
-                onSubmit={appendToUrl}
               >
+                <input
+                  type="hidden"
+                  name="redirect_to"
+                  value={`${window.location.origin}/#thank-you`}
+                />
                 <input
                   name="name"
                   className="input"
