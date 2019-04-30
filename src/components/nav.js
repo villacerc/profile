@@ -46,7 +46,7 @@ class Nav extends React.Component {
   scrollTo = id => {
     const el = document.getElementById(id)
 
-    const topOffset = id === "resume" ? -110 : -35
+    const topOffset = id === "resume" ? -120 : -35
 
     scrollIntoView(el, { align: { topOffset } })
     this.setState({ toggleNav: false })
