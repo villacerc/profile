@@ -14,7 +14,7 @@ const Services = () => {
     {
       title: "Back End Development",
       text:
-        "Create rest APIs and database solutions. Use web services to manage environments and scalability.",
+        "Create REST APIs and database solutions. Use web services to manage environments and scalability.",
       icon: "fas fa-server",
     },
     {

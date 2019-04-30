@@ -41,10 +41,10 @@ class LightBox extends React.Component {
     },
     "Pick and Roll": {
       photos: [pickAndRoll],
-      subtitle: "Basketball Pickup Game Finder",
+      subtitle: "Pick-up Game Finder",
       statusText: "Coming Soon",
       info:
-        "Finding a pickup game in your local centres is quick and easy or create your own and invite others.",
+        "Finding a pick-up game in your local centres is quick and easy or create your own and invite others.",
       tags: ["SPA", "React", "Node.js", "MongoDB"],
     },
     Foodsight: {
@@ -52,7 +52,7 @@ class LightBox extends React.Component {
       subtitle: "Food Dictionary",
       url: "https://foodsight.herokuapp.com",
       info:
-        "Learn more about those hard to pronounce food chemicals in a format that's easy to read. Also includes a discussion board, social media sharing and OAuth.",
+        "Website dedicated to educate consumers on common food chemicals. Also includes a discussion board, social media sharing and OAuth.",
       tags: ["JQuery", "Ruby on Rails", "PostgreSQL"],
     },
     "Delta Kids": {
