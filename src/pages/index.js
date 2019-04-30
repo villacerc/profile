@@ -11,6 +11,7 @@ import Resume from "../sections/Resume"
 import "./index.scss"
 
 export default function() {
+  console.log(process.env)
   const [showMessage, setShowMessage] = useState(
     window.location.href.includes("thank-you")
   )
