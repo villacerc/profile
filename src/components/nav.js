@@ -31,10 +31,10 @@ class Nav extends React.Component {
     item = item.toLowerCase()
     const linkEl = document.querySelector(`#link-${item}`)
 
-    const offsetHeight = 0.95 * window.innerHeight
+    const offsetHeight = window.innerHeight - 52
 
     inView.offset({
-      top: 35,
+      top: 52,
       bottom: offsetHeight,
     })
 
@@ -46,9 +46,7 @@ class Nav extends React.Component {
   scrollTo = id => {
     const el = document.getElementById(id)
 
-    const topOffset = id === "resume" ? -120 : -35
-
-    scrollIntoView(el, { align: { topOffset } })
+    scrollIntoView(el, { align: { top: 0 } })
     this.setState({ toggleNav: false })
   }
   render() {
