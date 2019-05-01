@@ -12,8 +12,8 @@ const footer = () => {
   }
   return (
     <footer
-      style={{ position: "relative" }}
-      className="section is-primary is-small has-text-centered"
+      style={{ position: "relative", textAlign: "center" }}
+      className="footer"
     >
       <div className={styles.chevron} onClick={scrollToHome}>
         <i className="fas fa-angle-up" />
