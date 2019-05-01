@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 
 import Home from "../sections/home"
 import Services from "../sections/services"
@@ -10,18 +10,22 @@ import Resume from "../sections/Resume"
 
 import "./index.scss"
 
-export default function() {
-  const [showMessage, setShowMessage] = useState(
-    window.location.href.includes("thank-you")
-  )
-
-  const message = () => {
+class Index extends React.Component {
+  state = {
+    showMessage: false,
+  }
+  componentDidMount() {
+    this.setState({
+      showMessage: window.location.href.includes("thank-you"),
+    })
+  }
+  message = () => {
     return (
       <article className="message is-success is-toast-top">
         <div className="message-header">
           Thank you for your time. I will get back to you as soon as I can.
           <button
-            onClick={() => setShowMessage(false)}
+            onClick={() => this.setState({ showMessage: false })}
             className="delete"
             aria-label="delete"
           />
@@ -29,16 +33,20 @@ export default function() {
       </article>
     )
   }
-  return (
-    <div>
-      {showMessage && message()}
-      <Home />
-      <About />
-      <Services />
-      <Resume />
-      <Projects />
-      <Contact />
-      <Footer />
-    </div>
-  )
+  render() {
+    return (
+      <div>
+        {this.state.showMessage && this.message()}
+        <Home />
+        <About />
+        <Services />
+        <Resume />
+        <Projects />
+        <Contact />
+        <Footer />
+      </div>
+    )
+  }
 }
+
+export default Index
