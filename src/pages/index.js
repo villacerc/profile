@@ -23,7 +23,7 @@ class Index extends React.Component {
     return (
       <article className="message is-success is-toast-top">
         <div className="message-header">
-          Thank you for your time. I will get back to you as soon as I can.
+          Thank you for contacting me. I will get back to you as soon as I can.
           <button
             onClick={() => this.setState({ showMessage: false })}
             className="delete"
