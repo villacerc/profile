@@ -56,12 +56,29 @@ a.is-active {
 .is-outlined {
   border-color: $primary-color !important;
 }
-.navbar-item {
-  transition: all 0.5s;
-}
 .navbar-item:hover {
   background-color: $primary-color !important;
 }
-.navbar-menu.is-active {
-  background-color: #293347 !important;
+
+@media (max-width: 1087px) {
+  .navbar-item {
+    transition: all 0.5s;
+    &:first-child {
+      padding-top: 1rem;
+    }
+    &:last-child {
+      padding-bottom: 1rem;
+    }
+  }
+  .navbar-menu {
+    display: block !important;
+    height: 0;
+    padding: 0 !important;
+    overflow: hidden;
+    transition: height 0.3s;
+    background-color: #293347 !important;
+  }
+  .navbar-menu.is-active {
+    height: 215px;
+  }
 }
