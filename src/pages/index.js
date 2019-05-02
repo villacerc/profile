@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 
 import Home from "../sections/home"
 import Services from "../sections/services"
@@ -36,14 +37,19 @@ class Index extends React.Component {
   render() {
     return (
       <div>
-        {this.state.showMessage && this.message()}
-        <Home />
-        <About />
-        <Services />
-        <Resume />
-        <Projects />
-        <Contact />
-        <Footer />
+        <Helmet>
+          <title>Carlo Villaceran</title>
+        </Helmet>
+        <div>
+          {this.state.showMessage && this.message()}
+          <Home />
+          <About />
+          <Services />
+          <Resume />
+          <Projects />
+          <Contact />
+          <Footer />
+        </div>
       </div>
     )
   }
