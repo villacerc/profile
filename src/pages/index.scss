@@ -58,10 +58,24 @@ a.is-active {
 }
 .navbar-item {
   transition: all 0.5s;
+  &:first-child {
+    padding-top: 1rem;
+  }
+  &:last-child {
+    padding-bottom: 1rem;
+  }
 }
 .navbar-item:hover {
   background-color: $primary-color !important;
 }
-.navbar-menu.is-active {
+.navbar-menu {
+  display: block !important;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: height 0.3s;
   background-color: #293347 !important;
+}
+.navbar-menu.is-active {
+  height: 215px;
 }
