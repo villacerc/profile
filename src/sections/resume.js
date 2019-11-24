@@ -8,6 +8,8 @@ const resume = () => {
       <div className="section-heading">
         <h3 className="title is-2">Resume</h3>
         <h4 className="subtitle is-5">More about me</h4>
+      </div>
+      <div style={{ display: "flex", justifyContent: "center" }}>
         <a
           href={myResume}
           download

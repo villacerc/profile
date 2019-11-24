@@ -59,6 +59,13 @@ a.is-active {
 .navbar-item:hover {
   background-color: $primary-color !important;
 }
+.tabs ul {
+  height: 42px;
+  border-bottom-width: 0px !important;
+}
+.tabs a {
+  border-bottom-color: transparent;
+}
 
 @media (max-width: 1087px) {
   .navbar-item {

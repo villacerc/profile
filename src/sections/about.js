@@ -23,16 +23,20 @@ class About extends React.Component {
       value: 80,
     },
     {
-      name: "Ruby",
-      value: 75,
-    },
-    {
       name: "Javascript",
       value: 80,
     },
     {
       name: "Node.js",
+      value: 80,
+    },
+    {
+      name: "Ruby",
       value: 75,
+    },
+    {
+      name: "Swift",
+      value: 60,
     },
     {
       name: "Java",
@@ -46,10 +50,6 @@ class About extends React.Component {
       name: "C#",
       value: 40,
     },
-    {
-      name: "Swift",
-      value: 45,
-    },
   ]
   values = [
     {
@@ -60,7 +60,7 @@ class About extends React.Component {
     {
       title: "Fast Apps",
       text:
-        "I like to achieve high performance in my apps by applying caching, lazy loading and bundle splitting techniques.",
+        "I enjoy creating high performing apps by applying caching, lazy loading and bundle splitting techniques.",
     },
     {
       title: "Modern Technologies",
@@ -82,10 +82,10 @@ class About extends React.Component {
           <h4 className="subtitle is-5">Hello World!</h4>
           <div className="container">
             <p style={{ fontSize: "16px" }}>
-              I am a web developer with 2 years experience specializing in
-              Node.js, Ruby, React and PostgreSQL. I have a strong knowledge of
-              e-commerce platforms focusing on property management, bookkeeping
-              and reporting. I love making awesome ideas come to life.
+              Web developer specializing in Node.js, Ruby, React and PostgreSQL.
+              I have a strong knowledge of e-commerce platforms focusing on
+              property management, bookkeeping and reporting. I love making
+              awesome ideas come to life.
             </p>
           </div>
         </div>
