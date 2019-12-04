@@ -2,6 +2,8 @@ import React from "react"
 import classNames from "classnames"
 import scrollIntoView from "scroll-into-view"
 
+import Codewars from "../components/codewars"
+
 import styles from "./footer.module.scss"
 
 const footer = () => {
@@ -38,6 +40,13 @@ const footer = () => {
               href="https://angel.co/carlo-villaceran"
             >
               <i className="fab fa-angellist" />
+            </a>
+            <a
+              className={classNames(styles.icon)}
+              style={{ lineHeight: "55px" }}
+              href="https://www.codewars.com/users/villacerc"
+            >
+              <Codewars />
             </a>
           </div>
         </div>

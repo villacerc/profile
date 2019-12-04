@@ -18,7 +18,8 @@
 .socialButtons {
   display: flex;
   justify-content: space-between;
-  width: 250px;
+  width: 100%;
+  max-width: 330px;
   margin: auto;
 }
 .chevron {
