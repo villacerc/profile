@@ -20,7 +20,9 @@ import jpt1 from "../images/jpt1.png"
 import jpt2 from "../images/jpt2.png"
 import jpt3 from "../images/jpt3.png"
 
-import pickAndRoll from "../images/picknroll-landing.png"
+import pnr1 from "../images/pnr1.png"
+import pnr2 from "../images/pnr2.png"
+import pnr3 from "../images/pnr3.png"
 
 import styles from "./lightBox.module.scss"
 
@@ -40,7 +42,7 @@ class LightBox extends React.Component {
       tags: ["SPA", "React", "Ruby on Rails", "PostgreSQL", "AWS S3"],
     },
     "Pick and Roll": {
-      photos: [pickAndRoll],
+      photos: [pnr1, pnr2, pnr3],
       subtitle: "Pick-up Game Finder",
       statusText: "Coming Soon",
       info:

@@ -2,7 +2,7 @@ import React from "react"
 import classNames from "classnames"
 
 import roomiaLanding from "../images/roomia-landing.png"
-import picknrollLanding from "../images/picknroll-landing.png"
+import picknrollLanding from "../images/pnr_home.png"
 import foodsightLanding from "../images/foodsight-landing.png"
 import deltaKids from "../images/deltakids-landing.png"
 import jptSplash from "../images/jpt-splash.png"
