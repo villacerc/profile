@@ -3,7 +3,8 @@
   cursor: pointer;
   overflow: hidden;
   background: white;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  // border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1);
   img {
     transition: transform 0.5s;
   }
@@ -29,8 +30,6 @@
     left: 5%;
     opacity: 0;
     z-index: 2;
-    border: 1px solid #999999;
-    // border-radius: 12px;
   }
   &:hover {
     img {

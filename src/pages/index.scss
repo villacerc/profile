@@ -50,8 +50,11 @@ h6 {
     color: white !important;
   }
 }
-a.is-active {
-  background-color: $primary-color !important;
+.is-active {
+  a {
+    border-bottom-color: $primary-color !important;
+    color: $primary-color !important;
+  }
 }
 .is-outlined {
   border-color: $primary-color !important;

@@ -82,10 +82,10 @@ class About extends React.Component {
           <h4 className="subtitle is-5">Hello World!</h4>
           <div className="container">
             <p style={{ fontSize: "16px" }}>
-              Web developer specializing in Node.js, Ruby, React and PostgreSQL.
-              I have a strong knowledge of e-commerce platforms focusing on
-              property management, bookkeeping and reporting. I love making
-              awesome ideas come to life.
+              I specialize in Node.js, Ruby, React and PostgreSQL with
+              experience developing an e-commerce platform focusing on property
+              management, bookkeeping and reporting. More importantly, I love
+              making awesome ideas come to life.
             </p>
           </div>
         </div>
@@ -102,7 +102,9 @@ class About extends React.Component {
                 >
                   <div className="box">
                     <div className="content">
-                      <h4 className="title is-5">{title}</h4>
+                      <h4 className="title is-5" style={{ color: "#4717f6" }}>
+                        {title}
+                      </h4>
                       {text}
                     </div>
                   </div>
@@ -125,7 +127,10 @@ class About extends React.Component {
                   ref={el => (this.skills[i] = { el, name, value })}
                 >
                   <div className={styles.caption}>
-                    <div>{name}</div> {value}%
+                    <div style={{ color: "#4717f6" }}>
+                      <b>{name}</b>
+                    </div>
+                    {value}%
                   </div>
                 </div>
               )

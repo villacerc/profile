@@ -52,7 +52,7 @@ const footer = () => {
         </div>
       </div>
       <div style={{ opacity: 0.5 }} className="copyright">
-        Carlo Villaceran © {new Date().getFullYear()}
+        Carlo Villaceran © 2019
       </div>
     </footer>
   )

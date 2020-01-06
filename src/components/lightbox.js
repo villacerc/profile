@@ -39,15 +39,15 @@ class LightBox extends React.Component {
       url: "https://www.roomia.com",
       info:
         "Roomia makes it easy for property managers to manage leases, track rent payments, handle reporting and bookkeeping.",
-      tags: ["SPA", "React", "Ruby on Rails", "PostgreSQL", "AWS S3"],
+      tags: ["SPA", "React", "Ruby on Rails", "Postgres", "AWS S3"],
     },
     "Pick and Roll": {
       photos: [pnr1, pnr2, pnr3],
-      subtitle: "Pick-up Game Finder",
+      subtitle: "Basketball Pick-up Game Finder",
       statusText: "Coming Soon",
       info:
-        "Finding a pick-up game in your local centres is quick and easy or create your own and invite others.",
-      tags: ["SPA", "React", "Node.js", "MongoDB"],
+        "With this app, finding a pick-up game is quick, easy and interactive. You can also create your own and invite others.",
+      tags: ["SPA", "React", "Node.js", "Postgres", "Sequelize"],
     },
     Foodsight: {
       photos: [fs1, fs2, fs3, fs4],
@@ -55,7 +55,7 @@ class LightBox extends React.Component {
       url: "https://foodsight.herokuapp.com",
       info:
         "Website dedicated to educate consumers on common food chemicals. Also includes a discussion board, social media sharing and OAuth.",
-      tags: ["JQuery", "Ruby on Rails", "PostgreSQL"],
+      tags: ["JQuery", "Ruby on Rails", "Postgres"],
     },
     "Delta Kids": {
       photos: [dk1, dk2, dk3, dk4],
@@ -63,7 +63,7 @@ class LightBox extends React.Component {
       url: "https://www.deltakids.ca/",
       info:
         "Discover family events, programs and resources available in the Delta community.",
-      tags: ["JQuery", "Ruby on Rails", "PostgreSQL"],
+      tags: ["JQuery", "Ruby on Rails", "Postgres"],
     },
     "Japanese Practice Tool": {
       photos: [jpt1, jpt2, jpt3],
