@@ -1,10 +1,7 @@
 import React from "react"
 import classNames from "classnames"
 
-import roomia1 from "../images/roomia1.png"
-import roomia2 from "../images/roomia2.png"
-import roomia3 from "../images/roomia3.png"
-import roomia4 from "../images/roomia4.png"
+import roomiaVideo from "../images/roomia.mp4"
 
 import fs1 from "../images/foodsight-landing.png"
 import fs2 from "../images/fs2.png"
@@ -34,9 +31,11 @@ class LightBox extends React.Component {
   }
   content = {
     Roomia: {
-      photos: [roomia3, roomia1, roomia2, roomia4],
+      // photos: [roomia3, roomia1, roomia2, roomia4],
+      photos: [],
       subtitle: "Property Management",
       url: "https://www.roomia.com",
+      urlText: "roomia.com",
       info:
         "Roomia makes it easy for property managers to manage leases, track rent payments, handle reporting and bookkeeping.",
       tags: ["SPA", "React", "Ruby on Rails", "Postgres", "AWS S3"],
@@ -44,7 +43,8 @@ class LightBox extends React.Component {
     "Pick and Roll": {
       photos: [pnr1, pnr2, pnr3],
       subtitle: "Basketball Pick-up Game Finder",
-      statusText: "Coming Soon",
+      url: "http://www.pickandroll.life",
+      urlText: "pickandroll.life",
       info:
         "With this app, finding a pick-up game is quick, easy and interactive. You can also create your own and invite others.",
       tags: ["SPA", "React", "Node.js", "Postgres", "Sequelize"],
@@ -53,6 +53,7 @@ class LightBox extends React.Component {
       photos: [fs1, fs2, fs3, fs4],
       subtitle: "Food Dictionary",
       url: "https://foodsight.herokuapp.com",
+      urlText: "foodsight.com",
       info:
         "Website dedicated to educate consumers on common food chemicals. Also includes a discussion board, social media sharing and OAuth.",
       tags: ["JQuery", "Ruby on Rails", "Postgres"],
@@ -61,6 +62,7 @@ class LightBox extends React.Component {
       photos: [dk1, dk2, dk3, dk4],
       subtitle: "Kids Activities Listings",
       url: "https://www.deltakids.ca/",
+      urlText: "deltakids.ca",
       info:
         "Discover family events, programs and resources available in the Delta community.",
       tags: ["JQuery", "Ruby on Rails", "Postgres"],
@@ -103,6 +105,7 @@ class LightBox extends React.Component {
       subtitle,
       info,
       url,
+      urlText,
       statusText,
       objectFit,
       tags,
@@ -113,24 +116,31 @@ class LightBox extends React.Component {
         <div className="modal-content">
           <div className={classNames(styles.box, this.state.box)}>
             <div className={classNames(styles.gallery)}>
-              <div className={classNames(styles.photo, "image is-5by3")}>
-                {photos.map((photo, i) => {
-                  const selected =
-                    this.state.selectedIndex === i
-                      ? { opacity: 1 }
-                      : { opacity: 0 }
+              {this.props.title === "Roomia" ? (
+                <video controls>
+                  <source src={roomiaVideo} type="video/mp4" />
+                  Your browser does not support HTML5 video.
+                </video>
+              ) : (
+                <div className={classNames(styles.photo, "image is-5by3")}>
+                  {photos.map((photo, i) => {
+                    const selected =
+                      this.state.selectedIndex === i
+                        ? { opacity: 1 }
+                        : { opacity: 0 }
 
-                  return (
-                    <img
-                      key={i}
-                      style={Object.assign(selected, {
-                        objectFit: objectFit || "unset",
-                      })}
-                      src={photo}
-                    />
-                  )
-                })}
-              </div>
+                    return (
+                      <img
+                        key={i}
+                        style={Object.assign(selected, {
+                          objectFit: objectFit || "unset",
+                        })}
+                        src={photo}
+                      />
+                    )
+                  })}
+                </div>
+              )}
             </div>
             <div className={styles.pos}>
               {photos.length > 1 && (
@@ -138,9 +148,11 @@ class LightBox extends React.Component {
                   <i className="fas fa-chevron-left" />
                 </div>
               )}
-              <div style={{ flex: 1 }}>
-                {selectedIndex + 1} of {photos.length}
-              </div>
+              {photos.length > 1 && (
+                <div style={{ flex: 1 }}>
+                  {selectedIndex + 1} of {photos.length}
+                </div>
+              )}
               {photos.length > 1 && (
                 <div onClick={() => this.switch("right", photos.length)}>
                   <i className="fas fa-chevron-right" />
@@ -153,7 +165,7 @@ class LightBox extends React.Component {
                 <div className={styles.link}>
                   {url ? (
                     <a target="_blank" href={url}>
-                      Visit Site
+                      {urlText}
                     </a>
                   ) : (
                     statusText

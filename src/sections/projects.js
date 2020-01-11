@@ -42,7 +42,7 @@ class Projects extends React.Component {
     {
       thumb: picknrollLanding,
       title: "Pick and Roll",
-      subtitle: "Pick-up Game Finder",
+      subtitle: "Basketball Pick-up Game Finder",
       category: "personal",
     },
     {
@@ -54,7 +54,7 @@ class Projects extends React.Component {
     {
       thumb: deltaKids,
       title: "Delta Kids",
-      subtitle: "Kids Pograms Listings",
+      subtitle: "Kids Pogram Listings",
       category: "business",
     },
     {
