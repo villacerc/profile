@@ -12,13 +12,13 @@ const resume = () => {
       <div style={{ display: "flex", justifyContent: "center" }}>
         <a
           href={myResume}
-          download
+          // download
           className="button is-rounded is-primary is-medium is-outlined"
         >
           <span className="icon">
             <i className="fas fa-file-alt" />
           </span>
-          <span>Download My Resume</span>
+          <span>View My Resume</span>
         </a>
       </div>
     </section>

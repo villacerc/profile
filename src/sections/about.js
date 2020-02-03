@@ -59,8 +59,7 @@ class About extends React.Component {
     },
     {
       title: "Fast Apps",
-      text:
-        "I enjoy creating high performing apps by applying caching, lazy loading and bundle splitting techniques.",
+      text: "I build optimized apps that run smoothly across all platforms.",
     },
     {
       title: "Modern Technologies",
@@ -68,9 +67,9 @@ class About extends React.Component {
         "I keep an eye on latest trends and implement modern solutions to ensure my apps are up to date.",
     },
     {
-      title: "Knowledge",
+      title: "Quick Delivery",
       text:
-        "I am naturally curious and like to learn new things to improve my skills as a developer.",
+        "I like to maintain a balance between fast development and good code quality.",
     },
   ]
 

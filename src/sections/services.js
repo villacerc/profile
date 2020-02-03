@@ -8,32 +8,31 @@ const Services = () => {
     {
       title: "Front End Development",
       text:
-        "Develop responsive and cross-browser compatible front end web code that will work on any device.",
+        "Develop responsive and cross-browser compatible front end code that will work on any device.",
       icon: "fas fa-laptop",
     },
     {
       title: "Back End Development",
       text:
-        "Create REST APIs using relational database or NoSQL. Use IaaS/SaaS to manage environments and scalability.",
+        "Create REST APIs and use cloud services to manage deployment and scalability.",
       icon: "fas fa-server",
     },
     {
-      title: "Web Security",
-      text:
-        "Use best standards and practices for securing client to server data interchange. SSL, JWT, OAuth, password hashing/salting.",
-      icon: "fas fa-shield-alt",
+      title: "Mobile Apps",
+      text: "Build custom mobile applications for iOS and Android.",
+      icon: "fas fa-mobile-alt",
     },
     {
       title: "Test Automation",
       text:
-        "Write and analyze test cases for automation to increase efficiency and app quality. Jest, Mocha, Puppeteer, RSpec.",
+        "Write and analyze test cases for automation to increase efficiency and app quality.",
       icon: "fas fa-hat-wizard",
     },
   ]
   return (
     <section className="section" id="services">
       <div className="section-heading">
-        <h3 className="title is-2">SERVICES</h3>
+        <h3 className="title is-2">EXPERTISE</h3>
         <h4 className="subtitle is-5">What can I do for you?</h4>
       </div>
       <div className={classNames("container", styles.center)}>
