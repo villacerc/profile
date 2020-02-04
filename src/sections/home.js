@@ -15,7 +15,6 @@ const home = () => (
     <Particles />
     <div className="hero-body">
       <div className={classNames("container", styles.center)}>
-        Nice to meet you! I am
         <h1 className={classNames("title is-1", styles.title)}>
           Carlo Villaceran
         </h1>

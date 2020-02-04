@@ -99,7 +99,7 @@ class About extends React.Component {
                   key={i}
                   className="column is-12-mobile is-half-tablet is-half-desktop"
                 >
-                  <div className="box">
+                  <div style={{ minHeight: "126px" }} className="box">
                     <div className="content">
                       <h4 className="title is-5" style={{ color: "#4717f6" }}>
                         {title}

@@ -23,17 +23,17 @@ const Services = () => {
       icon: "fas fa-mobile-alt",
     },
     {
-      title: "Test Automation",
+      title: "Quality Assurance",
       text:
-        "Write and analyze test cases for automation to increase efficiency and app quality.",
-      icon: "fas fa-hat-wizard",
+        "Create automated unit tests to detect logic errors and ensure app quality.",
+      icon: "fas fa-check",
     },
   ]
   return (
     <section className="section" id="services">
       <div className="section-heading">
         <h3 className="title is-2">EXPERTISE</h3>
-        <h4 className="subtitle is-5">What can I do for you?</h4>
+        <h4 className="subtitle is-5">What can I do?</h4>
       </div>
       <div className={classNames("container", styles.center)}>
         <div className="columns is-multiline is-mobile">
