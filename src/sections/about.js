@@ -1,6 +1,7 @@
 import React from "react"
 import EasyPieChart from "easy-pie-chart"
 import classNames from "classnames"
+import inView from "in-view"
 
 import styles from "./about.module.scss"
 
@@ -15,6 +16,50 @@ class About extends React.Component {
       })
       chart.update(value)
     })
+
+    window.addEventListener("scroll", this.setAnimations)
+  }
+
+  setAnimations = () => {
+    if (this.inViewport("title", 50))
+      document.getElementById("title").classList.add("fadeInLeft")
+    if (this.inViewport("subtitle", 50))
+      document.getElementById("subtitle").classList.add("fadeInRight")
+    if (this.inViewport("summary", 80))
+      document.getElementById("summary").classList.add("fadeUp")
+    if (this.inViewport("experience", 25))
+      document.getElementById("experience").classList.add("fadeInRight")
+    if (this.inViewport("fast", 25))
+      document.getElementById("fast").classList.add("fadeInLeft")
+    if (this.inViewport("modern", 25))
+      document.getElementById("modern").classList.add("fadeInRight")
+    if (this.inViewport("delivery", 25))
+      document.getElementById("delivery").classList.add("fadeInLeft")
+    if (this.inViewport("skills")) {
+      this.skills.forEach((skill, i) => {
+        setTimeout(() => {
+          document.getElementById(`skill${i}`).classList.add("fadeUp")
+        }, i * 200)
+      })
+    }
+  }
+
+  inViewport = (id, offset = 0) => {
+    var myElement = document.getElementById(id)
+    var bounding = myElement.getBoundingClientRect()
+
+    if (
+      bounding.top >= 0 &&
+      bounding.left >= 0 &&
+      bounding.right <=
+        (window.innerWidth || document.documentElement.clientWidth) &&
+      bounding.bottom + offset <=
+        (window.innerHeight || document.documentElement.clientHeight)
+    ) {
+      return true
+    }
+
+    return false
   }
 
   skills = [
@@ -54,20 +99,24 @@ class About extends React.Component {
   values = [
     {
       title: "User Experience",
+      id: "experience",
       text:
         "My goal is to build products that are not just useful but also attractive, intuitive and fun.",
     },
     {
       title: "Fast Apps",
+      id: "fast",
       text: "I build optimized apps that run smoothly across all platforms.",
     },
     {
       title: "Modern Technologies",
+      id: "modern",
       text:
         "I keep an eye on latest trends and implement modern solutions to ensure my apps are up to date.",
     },
     {
       title: "Quick Delivery",
+      id: "delivery",
       text:
         "I like to maintain a balance between fast development and good code quality.",
     },
@@ -77,9 +126,13 @@ class About extends React.Component {
     return (
       <section className="section" id="about">
         <div className="section-heading">
-          <h3 className="title is-2">About Me</h3>
-          <h4 className="subtitle is-5">Hello World!</h4>
-          <div className="container">
+          <h3 id="title" className="title is-2 animated">
+            About Me
+          </h3>
+          <h4 id="subtitle" className="subtitle is-5 animated">
+            Hello World!
+          </h4>
+          <div id="summary" className="container animated">
             <p style={{ fontSize: "16px" }}>
               I specialize in Node.js, Ruby, React and PostgreSQL with
               experience developing an e-commerce platform focusing on property
@@ -93,11 +146,12 @@ class About extends React.Component {
         </h4>
         <div className="container">
           <div className="columns is-multiline is-mobile">
-            {this.values.map(({ title, text }, i) => {
+            {this.values.map(({ title, text, id }, i) => {
               return (
                 <div
                   key={i}
-                  className="column is-12-mobile is-half-tablet is-half-desktop"
+                  id={id}
+                  className="column is-12-mobile is-half-tablet is-half-desktop animated"
                 >
                   <div style={{ minHeight: "126px" }} className="box">
                     <div className="content">
@@ -117,12 +171,13 @@ class About extends React.Component {
           >
             My Skills
           </h4>
-          <div className="columns is-multiline is-mobile">
+          <div id="skills" className="columns is-multiline is-mobile">
             {this.skills.map(({ name, value }, i) => {
               return (
                 <div
                   key={i}
-                  className={classNames(styles.skill, "column ")}
+                  id={`skill${i}`}
+                  className={classNames(styles.skill, "column animated")}
                   ref={el => (this.skills[i] = { el, name, value })}
                 >
                   <div className={styles.caption}>

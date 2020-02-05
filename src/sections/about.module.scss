@@ -13,3 +13,12 @@
   flex-direction: column;
   justify-content: center;
 }
+
+@keyframes slide-in-left {
+  from {
+    transform: translate(20px, 0px);
+  }
+  to {
+    transform: translate(0px, 0px);
+  }
+}
