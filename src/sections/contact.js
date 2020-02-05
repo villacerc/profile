@@ -7,6 +7,7 @@ import styles from "./contact.module.scss"
 class Contact extends React.Component {
   componentDidMount() {
     this.window = window
+    this.setAnimations()
     window.addEventListener("scroll", this.setAnimations)
   }
   setAnimations = () => {

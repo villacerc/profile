@@ -6,6 +6,7 @@ import styles from "./services.module.scss"
 
 class Services extends React.Component {
   componentDidMount() {
+    this.setAnimations()
     window.addEventListener("scroll", this.setAnimations)
   }
 

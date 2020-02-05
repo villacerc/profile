@@ -5,6 +5,7 @@ import myResume from "../images/CarloVillaceran_resume.pdf"
 
 class Resume extends React.Component {
   componentDidMount() {
+    this.setAnimations()
     window.addEventListener("scroll", this.setAnimations)
   }
 

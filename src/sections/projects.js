@@ -31,7 +31,7 @@ class Projects extends React.Component {
         effects: "fade scale(0.01)",
       },
     })
-
+    this.setAnimations()
     window.addEventListener("scroll", this.setAnimations)
   }
 

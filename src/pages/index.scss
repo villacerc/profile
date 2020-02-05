@@ -51,6 +51,9 @@ h6 {
   }
 }
 .navbar-end {
+  a {
+    transition: all 0.3s;
+  }
   .is-active {
     background-color: $primary-color !important;
   }

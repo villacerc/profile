@@ -16,7 +16,7 @@ class About extends React.Component {
       })
       chart.update(value)
     })
-
+    this.setAnimations()
     window.addEventListener("scroll", this.setAnimations)
   }
 
