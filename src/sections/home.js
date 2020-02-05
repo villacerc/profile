@@ -20,7 +20,7 @@ class Home extends React.Component {
     // move title at 20% of scroll rate
     const offset = window.pageYOffset
     el.style.top = offset * 0.3 + "px"
-    el.style.opacity = 0.9 - offset / 800
+    el.style.opacity = 1 - offset / 800
   }
   render() {
     return (

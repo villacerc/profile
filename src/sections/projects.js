@@ -18,6 +18,8 @@ class Projects extends React.Component {
     title: "",
     category: "all",
   }
+  animateDone = false
+  animating = false
 
   componentDidMount() {
     const mixitup = require("mixitup")
@@ -40,14 +42,29 @@ class Projects extends React.Component {
       document.getElementById("title4").classList.add("fadeInLeft")
     if (inViewport("subtitle4", 50))
       document.getElementById("subtitle4").classList.add("fadeInRight")
-    if (inViewport("proj1"))
-      document.getElementById("tabs").classList.add("fadeIn")
-    if (inViewport("proj1")) {
+
+    if (inViewport("proj1") && !this.animateDone && !this.animating) {
+      this.animating = true
       this.projects.forEach((proj, i) => {
         setTimeout(() => {
           document.getElementById(`proj${i}`).classList.add("fadeUp")
+          if (i === this.projects.length - 1) {
+            this.animating = false
+            this.animateDone = true
+          }
         }, i * 200)
       })
+
+      //remove persisting keyframes after animation is done
+      setTimeout(() => {
+        this.setState({ showTabs: true })
+        document.getElementById("tabs").classList.add("fadeInFast")
+        this.projects.forEach((proj, i) => {
+          document
+            .getElementById(`proj${i}`)
+            .classList.remove("fadeUp", "animated")
+        })
+      }, this.projects.length * 400)
     }
   }
 
@@ -84,6 +101,42 @@ class Projects extends React.Component {
       contain: true,
     },
   ]
+  renderTabs = () => {
+    return (
+      <div
+        id="tabs"
+        style={{ visibility: this.state.showTabs ? "visible" : "hidden" }}
+        className="tabs is-centered animated"
+      >
+        <ul>
+          <li
+            className={this.state.category == "all" ? "is-active" : ""}
+            onClick={() => {
+              this.setState({ category: "all" })
+            }}
+          >
+            <a data-filter="all">All</a>
+          </li>
+          <li
+            className={this.state.category == "business" ? "is-active" : ""}
+            onClick={() => {
+              this.setState({ category: "business" })
+            }}
+          >
+            <a data-filter=".business">Business</a>
+          </li>
+          <li
+            className={this.state.category == "personal" ? "is-active" : ""}
+            onClick={() => {
+              this.setState({ category: "personal" })
+            }}
+          >
+            <a data-filter=".personal">Personal</a>
+          </li>
+        </ul>
+      </div>
+    )
+  }
   render() {
     return (
       <section className="section" id="portfolio">
@@ -95,34 +148,7 @@ class Projects extends React.Component {
             See my latest works
           </h4>
         </div>
-        <div id="tabs" className="tabs is-centered animated">
-          <ul>
-            <li
-              className={this.state.category == "all" ? "is-active" : ""}
-              onClick={() => {
-                this.setState({ category: "all" })
-              }}
-            >
-              <a data-filter="all">All</a>
-            </li>
-            <li
-              className={this.state.category == "business" ? "is-active" : ""}
-              onClick={() => {
-                this.setState({ category: "business" })
-              }}
-            >
-              <a data-filter=".business">Business</a>
-            </li>
-            <li
-              className={this.state.category == "personal" ? "is-active" : ""}
-              onClick={() => {
-                this.setState({ category: "personal" })
-              }}
-            >
-              <a data-filter=".personal">Personal</a>
-            </li>
-          </ul>
-        </div>
+        {this.renderTabs()}
         <div id="projects" className="container">
           <div id="mixer" className="columns is-multiline is-mobile">
             {this.projects.map(

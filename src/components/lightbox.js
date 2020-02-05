@@ -143,7 +143,7 @@ class LightBox extends React.Component {
 
     return (
       <div className="modal is-active">
-        <div className="modal-background" />
+        <div onClick={this.close} className="modal-background" />
         <div className="modal-content">
           <div className={classNames(styles.box, this.state.box)}>
             <div className={classNames(styles.gallery)}>
