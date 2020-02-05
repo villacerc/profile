@@ -12,7 +12,7 @@ class Home extends React.Component {
   }
   titleRect = null
   componentDidMount() {
-    this.parallax
+    this.parallax()
     window.addEventListener("scroll", this.parallax)
   }
   parallax = () => {
@@ -34,7 +34,7 @@ class Home extends React.Component {
           <div
             style={{ transform: `translateY(-${this.state.translateY}px)` }}
             id="hero_title"
-            className={classNames("container", styles.center)}
+            className={classNames("container animated", styles.center)}
           >
             <h1 className={classNames("title is-1", styles.title)}>
               Carlo Villaceran
