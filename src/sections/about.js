@@ -1,7 +1,7 @@
 import React from "react"
 import EasyPieChart from "easy-pie-chart"
 import classNames from "classnames"
-import inView from "in-view"
+import { inViewport } from "../util"
 
 import styles from "./about.module.scss"
 
@@ -21,45 +21,27 @@ class About extends React.Component {
   }
 
   setAnimations = () => {
-    if (this.inViewport("title", 50))
+    if (inViewport("title", 50))
       document.getElementById("title").classList.add("fadeInLeft")
-    if (this.inViewport("subtitle", 50))
+    if (inViewport("subtitle", 50))
       document.getElementById("subtitle").classList.add("fadeInRight")
-    if (this.inViewport("summary", 80))
+    if (inViewport("summary", 80))
       document.getElementById("summary").classList.add("fadeUp")
-    if (this.inViewport("experience", 25))
+    if (inViewport("experience", 25))
       document.getElementById("experience").classList.add("fadeInRight")
-    if (this.inViewport("fast", 25))
+    if (inViewport("fast", 25))
       document.getElementById("fast").classList.add("fadeInLeft")
-    if (this.inViewport("modern", 25))
+    if (inViewport("modern", 25))
       document.getElementById("modern").classList.add("fadeInRight")
-    if (this.inViewport("delivery", 25))
+    if (inViewport("delivery", 25))
       document.getElementById("delivery").classList.add("fadeInLeft")
-    if (this.inViewport("skills")) {
+    if (inViewport("skills")) {
       this.skills.forEach((skill, i) => {
         setTimeout(() => {
           document.getElementById(`skill${i}`).classList.add("fadeUp")
         }, i * 200)
       })
     }
-  }
-
-  inViewport = (id, offset = 0) => {
-    var myElement = document.getElementById(id)
-    var bounding = myElement.getBoundingClientRect()
-
-    if (
-      bounding.top >= 0 &&
-      bounding.left >= 0 &&
-      bounding.right <=
-        (window.innerWidth || document.documentElement.clientWidth) &&
-      bounding.bottom + offset <=
-        (window.innerHeight || document.documentElement.clientHeight)
-    ) {
-      return true
-    }
-
-    return false
   }
 
   skills = [
