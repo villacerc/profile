@@ -1,22 +1,36 @@
 import React from "react"
 import classNames from "classnames"
+import { inViewport } from "../util"
 
 import styles from "./contact.module.scss"
 
 class Contact extends React.Component {
   componentDidMount() {
     this.window = window
+    window.addEventListener("scroll", this.setAnimations)
+  }
+  setAnimations = () => {
+    if (inViewport("title5", 50))
+      document.getElementById("title5").classList.add("fadeInLeft")
+    if (inViewport("subtitle5", 50))
+      document.getElementById("subtitle5").classList.add("fadeInRight")
+    if (inViewport("subtitle5", 100))
+      document.getElementById("form").classList.add("scaleIn")
   }
   render() {
     return (
       <section className="section" id="contact">
         <div className="container">
           <div className="section-heading">
-            <h3 className="title is-2">Contact</h3>
-            <h4 className="subtitle is-5">Get in touch</h4>
+            <h3 id="title5" className="title is-2 animated">
+              Contact
+            </h3>
+            <h4 id="subtitle5" className="subtitle is-5 animated">
+              Get in touch
+            </h4>
           </div>
 
-          <div className="columns">
+          <div id="form" className="columns animated">
             <div className={classNames("column is-6 is-offset-3", styles.form)}>
               <div className="box">
                 <form
