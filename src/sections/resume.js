@@ -13,7 +13,7 @@ class Resume extends React.Component {
       document.getElementById("title3").classList.add("fadeInLeft")
     if (inViewport("subtitle3", 50))
       document.getElementById("subtitle3").classList.add("fadeInRight")
-    if (inViewport("dl_resume", 50))
+    if (inViewport("dl_resume", 80))
       document.getElementById("dl_resume").classList.add("fadeIn")
   }
   render() {

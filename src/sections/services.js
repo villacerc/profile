@@ -14,7 +14,7 @@ class Services extends React.Component {
       document.getElementById("title2").classList.add("fadeInLeft")
     if (inViewport("subtitle2", 50))
       document.getElementById("subtitle2").classList.add("fadeInRight")
-    if (inViewport("expertise", 20)) {
+    if (inViewport("expertise1", 20)) {
       this.list.forEach((item, i) => {
         setTimeout(() => {
           document.getElementById(`expertise${i}`).classList.add("flipXTop")

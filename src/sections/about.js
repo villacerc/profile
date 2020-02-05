@@ -27,6 +27,8 @@ class About extends React.Component {
       document.getElementById("subtitle").classList.add("fadeInRight")
     if (inViewport("summary", 80))
       document.getElementById("summary").classList.add("fadeUp")
+    if (inViewport("subheader", 80))
+      document.getElementById("subheader").classList.add("fadeIn")
     if (inViewport("experience", 25))
       document.getElementById("experience").classList.add("fadeInRight")
     if (inViewport("fast", 25))
@@ -35,7 +37,9 @@ class About extends React.Component {
       document.getElementById("modern").classList.add("fadeInRight")
     if (inViewport("delivery", 25))
       document.getElementById("delivery").classList.add("fadeInLeft")
-    if (inViewport("skills")) {
+    if (inViewport("subheader2", 70))
+      document.getElementById("subheader2").classList.add("fadeIn")
+    if (inViewport("skill1")) {
       this.skills.forEach((skill, i) => {
         setTimeout(() => {
           document.getElementById(`skill${i}`).classList.add("fadeUp")
@@ -123,7 +127,11 @@ class About extends React.Component {
             </p>
           </div>
         </div>
-        <h4 style={{ textAlign: "center" }} className="title is-5">
+        <h4
+          id="subheader"
+          style={{ textAlign: "center" }}
+          className="title is-5 animated"
+        >
           Things I value
         </h4>
         <div className="container">
@@ -148,8 +156,9 @@ class About extends React.Component {
             })}
           </div>
           <h4
+            id="subheader2"
             style={{ textAlign: "center", margin: "40px 0" }}
-            className="title is-5"
+            className="title is-5 animated"
           >
             My Skills
           </h4>

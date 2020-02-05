@@ -1,5 +1,6 @@
 import React from "react"
 import classNames from "classnames"
+import { inViewport } from "../util"
 
 import roomiaLanding from "../images/roomia-landing.png"
 import picknrollLanding from "../images/pnr_home.png"
@@ -30,6 +31,24 @@ class Projects extends React.Component {
         effects: "fade scale(0.01)",
       },
     })
+
+    window.addEventListener("scroll", this.setAnimations)
+  }
+
+  setAnimations = () => {
+    if (inViewport("title4", 50))
+      document.getElementById("title4").classList.add("fadeInLeft")
+    if (inViewport("subtitle4", 50))
+      document.getElementById("subtitle4").classList.add("fadeInRight")
+    if (inViewport("proj1"))
+      document.getElementById("tabs").classList.add("fadeIn")
+    if (inViewport("proj1")) {
+      this.projects.forEach((proj, i) => {
+        setTimeout(() => {
+          document.getElementById(`proj${i}`).classList.add("fadeUp")
+        }, i * 200)
+      })
+    }
   }
 
   projects = [
@@ -69,10 +88,14 @@ class Projects extends React.Component {
     return (
       <section className="section" id="portfolio">
         <div className="section-heading">
-          <h3 className="title is-2">PORTFOLIO</h3>
-          <h4 className="subtitle is-5">See my latest works</h4>
+          <h3 id="title4" className="title is-2 animated">
+            PORTFOLIO
+          </h3>
+          <h4 id="subtitle4" className="subtitle is-5 animated">
+            See my latest works
+          </h4>
         </div>
-        <div className="tabs is-centered">
+        <div id="tabs" className="tabs is-centered animated">
           <ul>
             <li
               className={this.state.category == "all" ? "is-active" : ""}
@@ -100,16 +123,17 @@ class Projects extends React.Component {
             </li>
           </ul>
         </div>
-        <div className="container">
+        <div id="projects" className="container">
           <div id="mixer" className="columns is-multiline is-mobile">
             {this.projects.map(
               ({ thumb, title, subtitle, contain, category }, i) => {
                 return (
                   <div
                     key={i}
+                    id={`proj${i}`}
                     onClick={() => this.setState({ openLb: true, title })}
                     className={classNames(
-                      "column is-12-mobile is-three-quarters-mobile is-half-tablet is-one-third-desktop mix",
+                      "column is-12-mobile is-three-quarters-mobile is-half-tablet is-one-third-desktop mix animated",
                       category
                     )}
                   >
