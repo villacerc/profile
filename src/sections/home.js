@@ -41,7 +41,7 @@ class Home extends React.Component {
             </h1>
             <div className={styles.divider} />
             <h2 className={classNames(styles.subtitle)}>
-              Full Stack Web Developer
+              Front End Web Developer
             </h2>
             <div className={styles.divider} />
           </div>

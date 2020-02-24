@@ -34,7 +34,7 @@ class Resume extends React.Component {
           className="animated"
         >
           <a
-            href={myResume}
+            href={"/resume"}
             // download
             className="button is-rounded is-primary is-medium is-outlined"
           >
