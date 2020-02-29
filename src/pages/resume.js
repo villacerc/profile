@@ -47,6 +47,10 @@ class Resume extends Component {
                       <span>Email:</span> cvillaceran@gmail.com
                     </p>
                     <p>
+                      <span>Portfolio:</span>{" "}
+                      <a href="https://cvilla.space">cvilla.space</a>
+                    </p>
+                    <p>
                       <span>Location:</span> Richmond BC, Canada
                     </p>
                     <p>
@@ -82,7 +86,7 @@ class Resume extends Component {
                     <div>
                       <div className={styles.section_date}>
                         <p>Richmond, BC</p>
-                        <i>August 2017 - Present</i>
+                        <i>September 2017 - Present</i>
                       </div>
                     </div>
                     <div
@@ -110,13 +114,13 @@ class Resume extends Component {
                           Capybara and Rspec.
                         </li>
                         <li>
-                          Re-design companion app for the iOS using <b>Swift</b>{" "}
-                          and <b>Realm</b>
+                          Re-design and maintain companion app for the iOS using{" "}
+                          <b>Swift</b> and <b>Realm</b>
                         </li>
                         <li>
                           Create custom REST APIs and participate in{" "}
                           <b>data model planning</b> using Ruby on Rails and
-                          PostgresQL.
+                          PostgreSQL.
                         </li>
                         <li>
                           <b>Provide mentorship</b> to junior developers on best
@@ -150,7 +154,7 @@ class Resume extends Component {
                     <div>
                       <div className={styles.section_date}>
                         <p>Vancouver, BC</p>
-                        <i>2014 - 2017</i>
+                        <i>2014 - 2016</i>
                       </div>
                     </div>
                     <div className={styles.section_right}>
@@ -179,19 +183,17 @@ class Resume extends Component {
                           </div>
                           <div>
                             <p>Unit Testing</p>
-                            <p>Capybara, Rspec, Jest, Mocha, Puppeteer</p>
+                            <p>Capybara, RSpec, Jest, Mocha, Puppeteer</p>
                           </div>
                           <div>
                             <p>Back End Technologies</p>
-                            <p>
-                              Ruby on Rails, Express.JS, PostgresQL, MongoDB
-                            </p>
+                            <p>Ruby on Rails, NodeJS, PostgreSQL, MongoDB</p>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div>
-                      <span className={styles.label}>PERSONAL PROJECTS</span>
+                      <span className={styles.label}>SHOWCASE PROJECTS</span>
                       <div className={styles.misc_text}>
                         <div className={styles.project}>
                           <div>
