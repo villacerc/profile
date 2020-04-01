@@ -99,28 +99,27 @@ class Resume extends Component {
                       <i>Roomia Realty Inc.</i>
                       <ul>
                         <li>
-                          Design and develop beautiful, cross-compatible, front
-                          end web components using <b>React</b>, <b>Redux</b>,{" "}
+                          Design and develop cross-compatible, front end web
+                          components with <b>React</b>, <b>Redux</b>,{" "}
                           <b>Webpack</b> and <b>Material UI</b>.
                         </li>
                         <li>
                           Work closely with project manager, designer and back
-                          end developer on the{" "}
-                          <b>full software development cycle</b> of Roomia.
+                          end developer on the <b>full development cycle</b> of
+                          Roomia.
                         </li>
                         <li>
-                          Exercise <b>test driven development</b> to deliver
-                          high quality work in a fast paced environment using
-                          Capybara and Rspec.
+                          Exercise <b>test-driven development</b> to deliver
+                          high-quality projects in a high-demand setting using
+                          Capybara and RSpec.
                         </li>
                         <li>
-                          Re-design and maintain companion app for the iOS using{" "}
+                          Re-design and maintain companion app for the iOS via{" "}
                           <b>Swift</b> and <b>Realm</b>
                         </li>
                         <li>
-                          Create custom REST APIs and participate in{" "}
-                          <b>data model planning</b> using Ruby on Rails and
-                          PostgreSQL.
+                          Involved in <b>data model planning</b> and{" "}
+                          <b>API design</b> to provide input on code reuse.
                         </li>
                         <li>
                           <b>Provide mentorship</b> to junior developers on best
