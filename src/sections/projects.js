@@ -43,7 +43,7 @@ class Projects extends React.Component {
     if (inViewport("subtitle4", 50))
       document.getElementById("subtitle4").classList.add("fadeInRight")
 
-    if (inViewport("proj1") && !this.animateDone && !this.animating) {
+    if (inViewport("proj1", -200) && !this.animateDone && !this.animating) {
       this.animating = true
       this.projects.forEach((proj, i) => {
         setTimeout(() => {
@@ -69,12 +69,12 @@ class Projects extends React.Component {
   }
 
   projects = [
-    {
-      thumb: roomiaLanding,
-      title: "Roomia",
-      subtitle: "Property Management",
-      category: "business",
-    },
+    // {
+    //   thumb: roomiaLanding,
+    //   title: "Roomia",
+    //   subtitle: "Property Management",
+    //   category: "business",
+    // },
     {
       thumb: picknrollLanding,
       title: "Pick and Roll",
@@ -159,7 +159,7 @@ class Projects extends React.Component {
                     id={`proj${i}`}
                     onClick={() => this.setState({ openLb: true, title })}
                     className={classNames(
-                      "column is-12-mobile is-three-quarters-mobile is-half-tablet is-one-third-desktop mix animated",
+                      "column is-12-mobile is-three-quarters-mobile is-half-tablet is-one-half-desktop mix animated",
                       category
                     )}
                   >

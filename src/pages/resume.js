@@ -69,7 +69,7 @@ class Resume extends Component {
                       Excellent troubleshooting skills with the ability to
                       analyze code to produce the most cost-effective solutions.
                       Self-starter and problem solver with a strong knowledge of
-                      modular and object-oriented design.
+                      functional, procedural and object-oriented programming.
                     </div>
                   </div>
                 </section>
@@ -99,30 +99,28 @@ class Resume extends Component {
                       <i>Roomia Realty Inc.</i>
                       <ul>
                         <li>
-                          Design and develop cross-compatible, front end web
-                          components with <b>React</b>, <b>Redux</b>,{" "}
-                          <b>Webpack</b> and <b>Material UI</b>.
+                          Migrate form handling to redux-form to facilitate
+                          validations, refactoring and reduce time spent on
+                          managing state.
                         </li>
                         <li>
-                          Work closely with project manager, designer and back
-                          end developer on the <b>full development cycle</b> of
-                          Roomia.
+                          Reduce average page load time by 60% by configuring
+                          webpack to code-split javascript bundle.
                         </li>
                         <li>
-                          Exercise <b>test-driven development</b> to deliver
-                          high-quality projects in a high-demand setting using
-                          Capybara and RSpec.
+                          Implement 3rd party libraries and API to integrate
+                          graphs, geocoding, maps, S3 and civic address lookup.
                         </li>
                         <li>
-                          Re-design and maintain companion app for the iOS via{" "}
-                          <b>Swift</b> and <b>Realm</b>
+                          Use Jira to manage tasks and resolve tickets
+                          concerning bugs and feature improvements.
                         </li>
                         <li>
-                          Involved in <b>data model planning</b> and{" "}
-                          <b>API design</b> to provide input on code reuse.
+                          Re-design and maintain companion app for the iOS using
+                          XCode, Swift and Realm.
                         </li>
                         <li>
-                          <b>Provide mentorship</b> to junior developers on best
+                          Provide mentorship to junior developers on best
                           practices and good coding standards.
                         </li>
                       </ul>
